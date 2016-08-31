@@ -95,6 +95,14 @@ FeedBurner integration
   you've set the ``FEED_RSS`` or ``FEED_ATOM`` variables. This way, you can arbitrarily set your generated feed URL while
   presenting your FeedBurner URL to your users.
 
+Disqus comments
+---------------
+
+- ``DISQUS_SITENAME``: (required to enable) set this to the short site identifier
+  of your Disqus site. Example:
+  ``mrsenko``
+
+
 Isso self-hosted comments
 -------------------------
 
@@ -105,6 +113,10 @@ website.
 - ``ISSO_SITEURL``: (required to enable) set this to the URL of the server Isso
   is being served from without a trailing slash. Example:
   ``http://example.com``
+
+**NOTE:** comments are displayed only if the article is not a draft and
+``SITEURL`` is defined (usually is) and either one of ``DISQUS_SITENAME`` or
+``ISSO_SITEURL`` are defined!
 
 X min read
 ----------
@@ -163,6 +175,12 @@ to enable in each respective channel, your post metadata needs to specify:
 - ``use_schema_org: true``: For Google and Google+ specific meta tags.
 - ``use_open_graph: true``: For Facebook specific meta tags.
 - ``use_twitter_card: true``: For Twitter specific meta tags.
+
+Archive Title
+-------------
+
+- ``ARCHIVE_TITLE``: Custom page title for ``archives.html``. Default is
+  ``"Blog Archive"``.
 
 Contribute
 ----------
