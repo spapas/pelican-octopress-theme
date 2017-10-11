@@ -11,6 +11,9 @@ div.cell {
 
 .cell div.text_cell_render {
     padding: 0;
-    margin: 0;
-    
+    margin: 0;   
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
 }

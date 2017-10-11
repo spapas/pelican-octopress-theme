@@ -1,6 +1,15 @@
 Octopress Theme for Pelican
 ===========================
 
+To compile the sass code:
+
+```
+gem install sass
+gem install compass
+compass compile
+```
+
+
 This is a theme for `Pelican`_ that looks like `Octopress`_ default theme. I wrote this
 theme for `my personal blog`_.
 
