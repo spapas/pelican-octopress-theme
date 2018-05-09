@@ -45,6 +45,15 @@
     <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
   {% endfor %}
   </section>
+  
+  <section>
+  <h1>Yearly archives</h1>
+  {% set years = dates|groupby('date.year')|sort(reverse=False) %}
+  {% for year in years %}
+    {% set y = year|first %}
+    <a href="{{ SITEURL }}/posts/{{ y }}/">{{ y }}</a>{% if not loop.last %},{% endif %}
+  {% endfor %}
+  </section>
 
   {% include '_includes/github.html' %}
   {% include '_includes/social.html' %}
