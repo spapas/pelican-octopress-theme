@@ -85,17 +85,19 @@ border-radius: 5px;
     {% endif %}
 
   <script>
-    if( window.canRunAds === undefined ){
-        // adblocker detected, show fallback
-        console.log("CANNOT RUN ADS");
-        document.getElementById('gHPzseYvFrhZ123').style.display='block';
-      }
-
-      function adBlockFunction() {
-        window.setTimeout(function() {
+    window.setTimeout(function() { 
+      if( window.canRunAds === undefined ){
+          // adblocker detected, show fallback
+          console.log("CANNOT RUN ADS");
           document.getElementById('gHPzseYvFrhZ123').style.display='block';
-        }, 1000);
-      }
+        }
+
+        function adBlockFunction() {
+          window.setTimeout(function() {
+            document.getElementById('gHPzseYvFrhZ123').style.display='block';
+          }, 1000);
+        }
+      }, 1000)
   </script>
 
     <script data-ad-client="ca-pub-7673322832689008" async
