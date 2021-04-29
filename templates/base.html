@@ -98,7 +98,7 @@ border-radius: 5px;
           }, 1000);
         }
 
-        if(!window.hasOwnProperty('google_render_ad') || window.google_render_ad === undefined) { 
+        if( typeof(window.google_jobrunner) != 'object'   ) { 
             window.setTimeout(function() {
               document.getElementById('gHPzseYvFrhZ123').style.display='block';
             }, 1000);
